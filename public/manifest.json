@@ -1,0 +1,8 @@
+{
+  "short_name": "Rock Papper Scissors Game",
+  "name": "Rock Papper Scissors Game APP",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

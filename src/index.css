@@ -19,7 +19,7 @@
 body{
     color:var(--dark-txt);
     text-align: center;
-    height: 700px;
+    height:620px;
     font-family: "Barlow Semi Condensed";
     background: linear-gradient(var(--bg)) no-repeat;
     background-size: cover ;
@@ -131,6 +131,7 @@ header{
 }
 .gameContainerStart{
     margin:0 auto;
+    width:600px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,6 +164,7 @@ header{
     height:200px;
     margin:60px 0;
 }
+.nine{width:900px}
 .gameContainerStart img{
     width:100px;
 }
@@ -196,7 +198,7 @@ header{
     left:-25%;
     width:150%;
     height: 150%;
-    background-color: rgba(255,255,255,0.22);
+    background-color: rgba(255,255,255,0.1);
     z-index: -2;
     animation: winner 0.3s linear infinite;
 }
@@ -208,7 +210,7 @@ header{
     left:-40%;
     width:180%;
     height: 180%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.08);
     z-index: -2;
     animation: winner 0.32s linear infinite;
 }
@@ -220,9 +222,73 @@ header{
     left:-55%;
     width:210%;
     height: 210%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.05);
     z-index: -2;
     animation: winner 0.34s linear infinite;
+}
+@media screen and (max-width:769px){
+    body{
+        height: 900px;
+    }
+    header{
+        width:90%;
+    }
+    header img{
+        width:100px;
+    }
+    header .score{
+        width:100px;
+    }
+    .gameContainerHome{
+        width:90%;
+        height: max-content;
+        margin:0 auto 50px;
+        background: url(images/bg-triangle.svg) no-repeat center;
+        background-size: 200px;
+        place-items: center;
+    }
+    .gameContainerHome >div:first-child{
+        width:80%;
+    }
+    .gameContainerHome .rock,
+    .gameContainerHome .paper,
+    .gameContainerHome .scissors{
+        width:80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+    }
+    .gameContainerHome img{
+        width:50px;
+    }
+    #rulesButton{
+        position: static;
+        margin:0 auto;
+    }
+    .gameContainerStart,.nine{width:90%}
+    .gameContainerStart{
+        flex-direction: column;
+    }
+    .gameContainerStart .paper,
+    .gameContainerStart .rock,
+    .gameContainerStart .scissors,
+    .choiceAnim{
+        margin : 50px  auto  0;
+        width:120px;
+        height:120px;
+    }
+    .result{
+        margin:30px 0 0;
+    }
+    .houseChoice{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .houseChoice h1{
+        margin:30px 0 50px;
+    }
 }
 @keyframes choice {
     from {background-color:var(--choice-anim)}

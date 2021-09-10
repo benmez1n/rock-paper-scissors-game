@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 :root{
-    --bg: to bottom,hsl(214, 47%, 23%) , hsl(237, 49%, 15%);
+    --bg:  hsl(237, 49%, 15%);
     --scissors : to bottom,hsl(39, 89%, 49%), hsl(40, 84%, 53%);
     --paper:to bottom,hsl(230, 89%, 62%) ,hsl(230, 89%, 65%);
     --rock : to bottom,hsl(349, 71%, 52%) , hsl(349, 70%, 56%);
@@ -19,10 +19,8 @@
 body{
     color:var(--dark-txt);
     text-align: center;
-    height:620px;
     font-family: "Barlow Semi Condensed";
-    background: linear-gradient(var(--bg)) no-repeat;
-    background-size: cover ;
+    background-color:var(--bg);
 }
 h1,h2,
 h3,#rulesButton,
@@ -35,7 +33,7 @@ header{
     width:700px;
     display:flex;
     justify-content: space-between;
-    margin : 20px auto 70px;
+    margin : 20px auto 100px;
     padding:20px;
     border:solid 4px var(--header-outline);
     border-radius: 18px;
@@ -227,9 +225,6 @@ header{
     animation: winner 0.34s linear infinite;
 }
 @media screen and (max-width:769px){
-    body{
-        height: 900px;
-    }
     header{
         width:90%;
     }
@@ -238,6 +233,9 @@ header{
     }
     header .score{
         width:100px;
+    }
+    .rulesContent{
+        width:90%;
     }
     .gameContainerHome{
         width:90%;
